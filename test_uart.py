@@ -15,7 +15,7 @@ ser.reset_input_buffer()
 
 print("Raspberry's sending : ")
 
-n = 0
+n = 1
 
 try:
     while True:
@@ -24,6 +24,7 @@ try:
     	ser.flush()
 		send_msg = f"Pi send {n}: hehe"
     	print(send_msg)
+		n = n + 1
     	time.sleep(3)
 except KeyboardInterrupt:
 	ser.close()
