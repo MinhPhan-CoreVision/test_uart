@@ -14,12 +14,15 @@ ser = serial.Serial(
 ser.reset_input_buffer()
 
 print("Raspberry's sending : ")
- 
+
+n = 0
+
 try:
     while True:
+		send_msg = f"Pi send {n}:"
     	ser.write(b'hehe')
     	ser.flush()
     	print("hehe")
-    	time.sleep(1)
+    	time.sleep(3)
 except KeyboardInterrupt:
 	ser.close()
