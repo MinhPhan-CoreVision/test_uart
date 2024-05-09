@@ -22,7 +22,7 @@ try:
 		
     	ser.write(b'hehe')
     	ser.flush()
-		send_msg = f"Pi send {n}: hehe"
+		send_msg = "Pi send: " + n
     	print(send_msg)
 		n = n + 1
     	time.sleep(3)
