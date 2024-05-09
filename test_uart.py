@@ -8,5 +8,5 @@ if __name__ == '__main__':
     ser.reset_input_buffer()
 
     while True:
-        ser.write ("DietPi hello.\n")
+        ser.write (b"DietPi hello.\n")
         time.sleep(1)
