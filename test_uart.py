@@ -19,10 +19,11 @@ n = 0
 
 try:
     while True:
-		send_msg = f"Pi send {n}:"
+		
     	ser.write(b'hehe')
     	ser.flush()
-    	print("hehe")
+		send_msg = f"Pi send {n}: hehe"
+    	print(send_msg)
     	time.sleep(3)
 except KeyboardInterrupt:
 	ser.close()
