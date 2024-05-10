@@ -21,8 +21,10 @@ try:
     while True:
         ser.write(b'hehe')
         ser.flush()
-        send_msg = f"Pi send {n}: hehe"
+        send_msg = f"Pi send {n}: hehe.\n"
         print(send_msg)
+        line = ser.readline().decode('utf-8').rstrip()
+        print(line)
         n = n + 1
         time.sleep(3)
 except KeyboardInterrupt:
