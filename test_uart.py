@@ -14,6 +14,7 @@ ser = serial.Serial(
 )
 ser.reset_input_buffer()
 
+n=0
 print("Raspberry's sending : ")
 
 try:
