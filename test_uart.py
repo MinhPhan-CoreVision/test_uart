@@ -16,17 +16,20 @@ ser.reset_input_buffer()
 
 print("Raspberry's sending : ")
 
-n = 1
-
 try:
     while True:
+        line = ser.readline().decode('utf-8').rstrip()
+        read_msg = "Received Command: " + line
+        print(read_msg)
+
+        
+        send_msg = f"Pi send: hehe {n}.\n"
         ser.write(b'hehe')
         ser.flush()
-        send_msg = f"Pi send {n}: hehe.\n"
         print(send_msg)
-        line = ser.readline().decode('utf-8').rstrip()
-        print(line)
+        
         n = n + 1
         time.sleep(3)
 except KeyboardInterrupt:
-	ser.close()
+    print("Pi says Goodbye")
+    ser.close()
