@@ -25,7 +25,7 @@ try:
 
         
         send_msg = f"Pi send: hehe {n}.\n"
-        ser.write(b'hehe')
+        ser.write(send_msg)
         ser.flush()
         print(send_msg)
         
