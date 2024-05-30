@@ -32,7 +32,7 @@ try:
             read_msg = 'Get command: |->  ' + rcvMSG + '  <-|'
             print(read_msg)
         
-        send_msg = f"Pi send: pin {n}.\n"
+        send_msg = f"Pi send: ping {n}.\n"
         ser.write(send_msg.encode('utf-8'))
         ser.flush()
         print(send_msg)
